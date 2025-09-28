@@ -1,0 +1,14 @@
+<?php
+
+namespace App;
+require __DIR__ . '/../vendor/autoload.php';
+
+function capitalize(string $text): string
+{
+    if ($text === '') {
+        return '';
+    }
+    $firstSymbol = mb_strtoupper($text[0]);
+    $restSubstring = mb_substr($text, 1);
+    return "{$firstSymbol}{$restSubstring}";
+}

@@ -6,4 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
+    'Tests\\' => array($baseDir . '/tests'),
+    'App\\' => array($baseDir . '/src'),
 );
