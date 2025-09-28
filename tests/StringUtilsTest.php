@@ -4,13 +4,10 @@ namespace Tests;
 
 require __DIR__ . '/../vendor/autoload.php';
 use function App\capitalize;
+use Webmozart\Assert\Assert;
 
-if (capitalize('hello') !== 'Hello') {
-    throw new \Exception('Функция работает неверно!');
-}
+Assert::eq(capitalize('hello'), 'Hello');
 
-if (capitalize('') !== '') {
-    throw new \Exception('Функция работает неверно!');
-}
+Assert::eq(capitalize(''), '');
 
 echo 'Все тесты пройдены!';
